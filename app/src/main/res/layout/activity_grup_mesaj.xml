@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GrupMesajActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewGrupMesaj"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextGrupMesaji"
+        android:layout_width="268dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGrupMesajGonder"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewGrupMesaj" />
+
+    <Button
+        android:id="@+id/buttonGrupMesajGonder"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:text="->"
+        android:onClick="grupMesajGonder_OnClick"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGrupResimGonder"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextGrupMesaji"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewGrupMesaj" />
+
+    <Button
+        android:id="@+id/buttonGrupResimGonder"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:text="📎"
+        android:onClick="grupResimGonder_OnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonGrupMesajGonder"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewGrupMesaj" />
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
